@@ -14,6 +14,7 @@
     <Content Remove="reader-app\**" />
     <EmbeddedResource Remove="reader-app\**" />
     <None Remove="reader-app\**" />
+    <None Remove="Portos\MeterReader.proto" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,8 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.30.0" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.30.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,5 +37,17 @@
 
   <ItemGroup>
     <Folder Include="Portos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Portos\MeterReader.proto">
+      <GrpcServices>Server</GrpcServices>
+      <Access></Access>
+      <ProtoCompile></ProtoCompile>
+      <CompileOutputs></CompileOutputs>
+      <OutputDir></OutputDir>
+      <Generator></Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
+    </Protobuf>
   </ItemGroup>
 </Project>
