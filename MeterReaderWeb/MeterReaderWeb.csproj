@@ -32,4 +32,7 @@
     <ProjectReference Include="..\MeterReaderLib\MeterReaderLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Portos\" />
+  </ItemGroup>
 </Project>
